@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="membership_views.list">
+      <field name="name">membership_views list</field>
+      <field name="model">membership_views.membership_views</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="membership_views.action_window">
+      <field name="name">membership_views window</field>
+      <field name="res_model">membership_views.membership_views</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="membership_views.action_server">
+      <field name="name">membership_views server</field>
+      <field name="model_id" ref="model_membership_views_membership_views"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="membership_views" id="membership_views.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="membership_views.menu_1" parent="membership_views.menu_root"/>
+    <menuitem name="Menu 2" id="membership_views.menu_2" parent="membership_views.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="membership_views.menu_1_list" parent="membership_views.menu_1"
+              action="membership_views.action_window"/>
+    <menuitem name="Server to list" id="membership_views" parent="membership_views.menu_2"
+              action="membership_views.action_server"/>
+-->
+  </data>
+</odoo>
